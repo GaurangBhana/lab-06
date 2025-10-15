@@ -34,10 +34,19 @@ public class CityList {
         return list;
     }
 
+    /** Checks if the city list contains the inputted city
+     * @param city: city to check membership of in the CityList object
+     * @return : true if the city is in the list, false otherwise
+     */
     public boolean hasCity(City city){
         return cities.contains(city);
     }
 
+    /** Deletes the inputted city from the list if it exists, otherwise we throw an
+     * IllegalArgumentException
+     * @param city: the city to be removed
+     * @exception IllegalArgumentException : occurs if the city to be removed is not in the list
+     */
     public void delete(City city){
         if (this.hasCity(city)){
             cities.remove(city);
@@ -46,6 +55,9 @@ public class CityList {
         }
     }
 
+    /** Returns the number of elements in the CityList object
+     * @return : the amount of elements in the CityList object
+     */
     public int countCities(){
         return cities.size();
     }

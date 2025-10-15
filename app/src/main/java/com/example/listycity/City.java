@@ -1,5 +1,7 @@
 package com.example.listycity;
 
+import java.util.Objects;
+
 /**
  * This is a class that defines a City.
  */
@@ -34,6 +36,19 @@ public class City implements Comparable{
     public int compareTo(Object o) {
         City city = (City) o;
         return this.city.compareTo(city.getCityName());
+    }
+
+    /** Checks if two cities have equal values
+     * @param city : the city object to compare equality with
+     * @return : true if they have equal values, false otherwise
+     */
+    @Override
+    public boolean equals(Object city){
+        if (!(city instanceof City)){
+            return false;
+        }
+        City city_2 = (City) city;
+        return (Objects.equals(this.city, city_2.getCityName())) && (Objects.equals(this.province, city_2.getProvinceName()));
     }
     
 }
