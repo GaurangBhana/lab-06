@@ -52,7 +52,7 @@ public class CityListTest {
     }
 
     @Test
-    public void testDelete() {
+    public void testDeleteCity() {
         CityList cityList = mockCityList();
 
         City city = new City("Calgary", "Alberta");
@@ -69,7 +69,7 @@ public class CityListTest {
     }
 
     @Test
-    public void testMembershipOps(){
+    public void testCityExists(){
         CityList cityList = mockCityList();
 
         City city = new City("Calgary", "Alberta");
