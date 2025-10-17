@@ -10,6 +10,9 @@ import java.util.List;
  * @version 1.0
  */
 public class CityList {
+    /**
+     * List of Cities
+     */
     private List<City> cities = new ArrayList<>();
 
     /**
@@ -17,8 +20,6 @@ public class CityList {
      * already exists in the list
      * @param city This is a candidate city to add
      * @throws IllegalArgumentException if the city that is added is already a city in the list
-     * @author Gaurang Bhana
-     * @version 1.0
      */
     public void add(City city) {
         if (cities.contains(city)) {
@@ -29,9 +30,7 @@ public class CityList {
 
     /**
      * This returns a sorted list of cities
-     * @return Return the sorted list
-     * @author Gaurang Bhana
-     * @version 1.0
+     * @return Return the sorted list of cities
      */
     public List<City> getCities() {
         List<City> list = cities;
@@ -42,8 +41,6 @@ public class CityList {
     /** Checks if the city list contains the inputted city
      * @param city city to check membership of in the CityList object
      * @return true if the city is in the list, false otherwise
-     * @author Gaurang Bhana
-     * @version 1.0
      */
     public boolean hasCity(City city){
         return cities.contains(city);
@@ -52,9 +49,7 @@ public class CityList {
     /** Deletes the inputted city from the list if it exists, otherwise we throw an
      * IllegalArgumentException
      * @param city the city to be removed
-     * @exception IllegalArgumentException : occurs if the city to be removed is not in the list
-     * @author Gaurang Bhana
-     * @version 1.0
+     * @exception IllegalArgumentException occurs if the city to be removed is not in the list
      */
     public void delete(City city){
         if (this.hasCity(city)){
@@ -66,11 +61,8 @@ public class CityList {
 
     /** Returns the number of elements in the CityList object
      * @return the amount of elements in the CityList object
-     * @author Gaurang Bhana
-     * @version 1.0
      */
     public int countCities(){
         return cities.size();
     }
-
 }
